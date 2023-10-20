@@ -16,7 +16,7 @@ function showPosition(position) {
     lat = position.coords.latitude; 
     lon = position.coords.longitude;
 
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${lon}&aqi=yes`;
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${lon}&aqi=yes`;
     fetch(apiUrl)
     .then((result) => {
         let myData = result.json(); 
