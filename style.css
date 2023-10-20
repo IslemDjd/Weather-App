@@ -1,0 +1,94 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+@font-face {
+    font-family: "MyFont";
+    src: url(font/Kanit-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "MyFont";
+    color: white;
+}
+
+.frame{
+    width: 70%;
+    margin: 100px auto;
+    text-align: center;
+    /* background-color: aqua; */
+
+    #reg{
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    #temp{
+        font-size: 100px;
+        font-weight: 600;
+    }
+
+    .humidity{
+        width: 30%;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    #conditionText{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    #lastUpd{
+        font-weight: 400;
+    }
+
+    #text{
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    #autor a{
+        text-decoration: none;
+        color: rgb(39, 132, 144);
+        
+        :hover{
+            color: rgb(18, 111, 123);
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width: 650px) {
+    body{
+        background-image: url(images/phone.jpg);
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}
