@@ -31,6 +31,7 @@ function showPosition(position) {
         document.getElementById("ico").src = data.current.condition.icon;
         document.getElementById("conditionText").innerHTML = data.current.condition.text;
         document.getElementById("lastUpd").innerHTML ="Last Updated On : "+ data.current.last_updated;
+        document.getElementById("humIco").src = "icons/humidity.png";
     }).catch((error) => {
         console.log(error);
         document.getElementById("err").innerHTML = "Invalid Location";
