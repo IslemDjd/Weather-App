@@ -5,7 +5,7 @@ let lon;
 
 function getLocation() {
     try {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
     } catch {
         document.getElementById("err").innerHTML = "ERROR";
     }
@@ -38,6 +38,16 @@ function showPosition(position) {
     });
 }
 
+
+function showError(error) {
+    if (error.code === error.PERMISSION_DENIED) {
+        // Geolocation is available, but the user denied permission
+        document.getElementById("err").innerHTML = "PLease Turn On Your GPS";
+    } else {
+        // Geolocation is available, but an error occurred
+        document.getElementById("err").innerHTML = "An error occurred while trying to access geolocation data";
+    }
+}
 
 
 // const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${locationName}&aqi=yes`;
